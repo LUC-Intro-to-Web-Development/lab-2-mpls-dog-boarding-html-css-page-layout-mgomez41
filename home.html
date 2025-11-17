@@ -1,44 +1,128 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>MPLS Dogboarding </title>
-        <style>
-        
-        </style>
-    </head>
-    <body>
-        <div id="container">
-            <header>
-                <img src="" alt="">
-            </header>
-            <main id="flexcontainer">
-                <aside>
-                    <h2>About Us</h2>
-                    <p>Quality dog care service - The luxury hotel for dogs!</p>
-                </aside>
-                <aside>
-                    <h2>Price</h2>
-                    <h3>Weekly Boarding</h3>
-                    <p>$425 - 7 days [24 hours from drop-off time] </li>
-                    <h3>Daily Rate: </h3>
-                    <p>$75 - 1 day [24 hours from drop-off time</p>
-                    
-                    </ul>
-                </aside>
-                <aside>
-                    <h2>Hours of Operation</h2>
-                    <ul>
-                        <li>Monday: - 7am - 6pm</li>
-                        <li>Tuesday: - 7am - 6pm</li>
-                        <li>Wednesday: - 7am - 6pm</li>
-                        <li>Thursday: 7am - 6pm</li>
-                        <li>Friday:</li>
-                    </ul>
-                </aside>
-            </main>
-            <footer>
-                <div id="copyright">	&#169;  2019 - 2024 MPLS Dogboarding</div>
-            </footer>
-        </div>
-    </body>
+<!--marygomez -->
+<!DOCTYPE html> <!--Instructions to Browser-->
+<html> <!--Root-->
+<head> <!--Contains the meta data-->
+    <title>MPLS Dogboarding</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        /* Body font and margin reset */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+        }
+
+
+    
+        /* Turn the container into a CSS Grid layout */
+        #container {
+            display: grid;                          
+            grid-template-columns: 1fr 1fr 1fr;     
+            grid-template-rows: 105px auto 15%;     
+            width: 100vw;                           
+            height: 100vh;                          
+        }
+
+        /* Grid placement + borders */
+        header {
+            grid-column: 1 / 4;   /* first row, all 3 columns */
+            grid-row: 1;
+            
+        }
+
+        main {
+            grid-column: 1 / 4;   /* second row */
+            grid-row: 2;
+            
+        }
+
+        footer {
+            grid-column: 1 / 4;   /* third row */
+            grid-row: 3;
+            
+            padding-top: 40px;    /* 40px padding on top */
+        }
+
+        /* copyright box styling */
+        footer #copyright {
+            width: 275px;
+            margin: auto;
+        }
+        /* header image styling */
+        header img {
+            display: block;
+            width: 20%;
+            margin: auto;
+        }
+        /* FLEXBOX for main container */
+        #flexcontainer {
+            display: flex;                 /* Create flex items */
+            flex-wrap: wrap;               /* Allow wrapping */
+            width: 100%;
+            background-image: url("images/dog_bg.jpeg");
+            background-position: center;   /* Center background */
+            background-size: cover;        /* fill container */
+            background-repeat: no-repeat;
+        }
+
+        /* FLEX ITEMS */
+        #flexcontainer > aside {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 325px;
+
+            height: 350px;
+            
+            padding: 10px;
+
+            margin: 4% 2%;                 /* 4% top/bottom, 2% left/right */
+
+            background-color: #ffffffcf;   /* Slight transparency */
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <img src="images/mpls_dog_logo.png" alt="MPLS Dog Boarding Logo">
+
+        </header>
+
+        <main id="flexcontainer">
+            <aside>
+                <h2>About Us</h2>
+                <p>Quality dog care service - The luxury hotel for dogs!</p>
+            </aside>
+
+            <aside>
+                <h2>Price</h2>
+                <h3>Weekly Boarding</h3>
+                <p>$425 - 7 days [24 hours from drop-off time]</p>
+
+                <h3>Daily Rate:</h3>
+                <p>$75 - 1 day [24 hours from drop-off time]</p>
+            </aside>
+
+            <aside>
+                <h2>Hours of Operation</h2>
+                <ul>
+                    <li>Monday - 7am - 6pm</li>
+                    <li>Tuesday - 7am - 6pm</li>
+                    <li>Wednesday - 7am - 6pm</li>
+                    <li>Thursday - 7am - 6pm</li>
+                    <li>Friday - 7am - 6pm</li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+            <div id="copyright">© 2019 - 2024 MPLS Dogboarding</div>
+        </footer>
+    </div>
+</body>
 </html>
